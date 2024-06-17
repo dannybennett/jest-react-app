@@ -25,5 +25,5 @@ dist-ssr
 
 # reverse proxy docker
 reverse-proxy/~/temp
-
+cert
 

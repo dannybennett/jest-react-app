@@ -9,21 +9,11 @@ import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 // });
 
 
+interface IError {
+    status?: number
+}
+
 // sourced from - https://altrim.io/posts/axios-http-client-using-typescript
-
-const injectToken = (config: AxiosRequestConfig): AxiosRequestConfig => {
-	try {
-		//   const token = localStorage.getItem("accessToken");
-
-		//   if (token != null) {
-		// 	config.headers.Authorization = `Bearer ${token}`;
-		//   }
-		return config;
-	} catch (error: any) {
-		throw new Error(error);
-	}
-};
-
 
 enum StatusCode {
 	Unauthorized = 401,
@@ -66,15 +56,15 @@ class Http {
 		return http;
 	}
 
-	request<T = any, R = AxiosResponse<T>>(config: AxiosRequestConfig): Promise<R> {
+	request<T, R = AxiosResponse<T>>(config: AxiosRequestConfig): Promise<R> {
 		return this.http.request(config);
 	}
 
-	get<T = any, R = AxiosResponse<T>>(url: string, config?: AxiosRequestConfig): Promise<R> {
+	get<T, R = AxiosResponse<T>>(url: string, config?: AxiosRequestConfig): Promise<R> {
 		return this.http.get<T, R>(url, config);
 	}
 
-	post<T = any, R = AxiosResponse<T>>(
+	post<T, R = AxiosResponse<T>>(
 		url: string,
 		data?: T,
 		config?: AxiosRequestConfig
@@ -82,7 +72,7 @@ class Http {
 		return this.http.post<T, R>(url, data, config);
 	}
 
-	put<T = any, R = AxiosResponse<T>>(
+	put<T, R = AxiosResponse<T>>(
 		url: string,
 		data?: T,
 		config?: AxiosRequestConfig
@@ -90,11 +80,11 @@ class Http {
 		return this.http.put<T, R>(url, data, config);
 	}
 
-	delete<T = any, R = AxiosResponse<T>>(url: string, config?: AxiosRequestConfig): Promise<R> {
+	delete<T, R = AxiosResponse<T>>(url: string, config?: AxiosRequestConfig): Promise<R> {
 		return this.http.delete<T, R>(url, config);
 	}
 
-	private handleError(error: any) {
+	private handleError(error: IError) {
 		const { status } = error;
 
 		switch (status) {

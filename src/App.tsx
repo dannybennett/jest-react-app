@@ -1,14 +1,14 @@
 import { useState, useEffect } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+// import reactLogo from './assets/react.svg'
+// import viteLogo from '/vite.svg'
 import './App.css'
 import ICoffee from "./types/coffee.type";
 import fetchCoffee from './services/coffee.service';
 
 
 function App() {
-  const [count, setCount] = useState(0)
-  const [coffee, setCoffee] = useState<Array<ICoffee>>([]);
+  // const [count, setCount] = useState(0)
+  const [_coffee, setCoffee] = useState<ICoffee>({file:'/'});
 
   useEffect(() => {
     const getCoffee = async () => {
@@ -31,7 +31,7 @@ function App() {
       </div>
       <h1>Vite + React</h1> */}
       <div className="card">
-        <img src={coffee.file} />
+        <img src={_coffee.file ?? ''} />
       </div>
     </>
   )
