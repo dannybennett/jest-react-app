@@ -8,12 +8,13 @@ import fetchCoffee from './services/coffee.service';
 
 function App() {
   // const [count, setCount] = useState(0)
-  const [_coffee, setCoffee] = useState<ICoffee>({file:'/'});
+  const [coffee, setCoffee] = useState<ICoffee>({file:'/'});
 
   useEffect(() => {
     const getCoffee = async () => {
       const images = await fetchCoffee();
       setCoffee(images);
+      console.log(images)
     };
 
     getCoffee();
@@ -31,7 +32,7 @@ function App() {
       </div>
       <h1>Vite + React</h1> */}
       <div className="card">
-        <img src={_coffee.file ?? ''} />
+        <img src={coffee.file ?? ''} />
       </div>
     </>
   )

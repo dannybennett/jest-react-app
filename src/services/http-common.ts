@@ -44,10 +44,12 @@ class Http {
 		});
 
 		http.interceptors.response.use(
-			(response) => response.data,
+			(response) => {
+				return response;
+			},
 			(error) => {
 				const { response } = error;
-				console.log(response)
+				console.log('error in service')
 				return this.handleError(response);
 			}
 		);

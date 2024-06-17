@@ -5,10 +5,11 @@
 
 ```
 brave-browser --disable-web-security --user-data-dir="~/temp"
-Set ENV variables as below to allow debugging with CORS disabled
 ```
 
 #### Windows
+
+Set ENV variables as below to allow debugging with CORS disabled
 
 Update environment variables in UI to the below with correct paths.
 
