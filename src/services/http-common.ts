@@ -38,7 +38,7 @@ class Http {
 
 	initHttp() {
 		const http = axios.create({
-			baseURL: "https://coffee.alexflipnote.dev/",
+			baseURL: "http://localhost",
 			headers,
 			withCredentials: true,
 		});
@@ -48,8 +48,7 @@ class Http {
 				return response;
 			},
 			(error) => {
-				const { response } = error;
-				console.log('error in service')
+				const { response } = error;				
 				return this.handleError(response);
 			}
 		);
@@ -101,6 +100,9 @@ class Http {
 			}
 			case StatusCode.TooManyRequests: {
 				break;
+			}
+			default: {
+				console.log('Uknown error in service');
 			}
 		}
 		return Promise.reject(error);

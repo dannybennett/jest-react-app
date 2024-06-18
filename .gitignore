@@ -27,3 +27,4 @@ dist-ssr
 reverse-proxy/~/temp
 cert
 
+.cache

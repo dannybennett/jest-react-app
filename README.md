@@ -30,6 +30,12 @@ Git Bash/ConEmu
 
 ```bash
 alias crom="cd '/c/Program Files/Google/Chrome/Application' && ./chrome --disable-web-security --user-data-dir=/c/Users/dbenne6/Workspace --incognito"
+
+# add alias to startup
+vi ~/.bashrc
+
+# reload startup
+source ~/.bashrc
 ```
 
 
@@ -55,6 +61,35 @@ https://github.com/dannybennett/jest-react-app
 See sub folder reverse-proxy
 
 
-### Free APIs
+
+### Material-Tailwind UI
+
+https://mui.com/material-ui/getting-started/installation/
+
+
+#### Styled Components
+
+```bash
+npm install @mui/material @mui/styled-engine-sc styled-components
+
+npm install @fontsource/roboto
+```
+
+
+### Assets
+
+#### SVG
+
+https://github.com/n3r4zzurr0/svg-spinners
+
+
+
+### APIs
+
+#### Azure DevOps
+
+https://learn.microsoft.com/en-us/rest/api/azure/devops/work/iterations/get?view=azure-devops-rest-7.1&tabs=HTTP
+
+#### Free APIs
 
 https://free-apis.github.io/#/browse
