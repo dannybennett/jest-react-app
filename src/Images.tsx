@@ -6,7 +6,7 @@ import Iframe from './components/Iframe.tsx';
 import './App.css'
 
 
-function App() {
+function Images() {
   const [coffee, setCoffee] = useState<ICoffee>({ file: waitSvg });
 
   useEffect(() => {
@@ -32,4 +32,4 @@ function App() {
   )
 }
 
-export default App
+export default Images
