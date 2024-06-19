@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom/client';
-import App from './App.tsx';
-import Images from './Images.tsx';
+import App from './pages/App.tsx';
+import Images from './pages/Images.tsx';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css'
 
