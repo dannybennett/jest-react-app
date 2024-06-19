@@ -18,7 +18,12 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-.image {
+.tiny {
+  height: 20px;
+  font-weight: 20px;
+}
+
+.portrait {
   height: 400px;
   font-weight: 400px;
 }

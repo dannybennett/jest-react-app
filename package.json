@@ -1,12 +1,12 @@
 {
-  "name": "jest-react-app",
+  "name": "digital-ocaapi-react-boilerplate",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "package": "tsc && vite build && ./rebuild.sh",
+    "package": "tsc && vite build && ./scripts/rebuild.sh",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "tsc && vite build && vite preview",
     "test": "jest"
@@ -26,10 +26,12 @@
     "@typescript-eslint/parser": "^7.2.0",
     "@vitejs/plugin-react-swc": "^3.5.0",
     "axios": "^1.7.2",
+    "bootstrap": "^5.3.3",
     "eslint": "^8.57.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
     "jest": "^29.7.0",
+    "react-bootstrap": "^2.10.2",
     "typescript": "^5.2.2",
     "vite": "^5.2.0"
   },

@@ -1,19 +1,8 @@
 import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
-
-// export default axios.create({
-// 	baseURL: 'https://potterapi-fedeperin.vercel.app',
-// 	headers: {
-// 		'Content-type': 'application/json'
-// 	},
-// });
-
-
 interface IError {
     status?: number
 }
-
-// sourced from - https://altrim.io/posts/axios-http-client-using-typescript
 
 enum StatusCode {
 	Unauthorized = 401,
